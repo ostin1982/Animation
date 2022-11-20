@@ -1,0 +1,188 @@
+.games {
+    padding: 120px;
+
+    &__heading {
+        font-size: $fonts-giant-1920;
+        font-weight: 800;
+        line-height: 220px;
+        color: $color-main;
+        text-align: center;
+    }
+
+    &__block {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 80px;
+        padding: 50px 0 0 0;
+    }
+
+    &__card {
+        width: 100%;
+
+        &_color {
+            background: $color-second;
+            padding: 40px 50px;
+            @include flex-line-center();
+            flex-direction: column;
+            text-decoration: none;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        padding: 0 0 28px 0;
+    }
+
+    &__name {
+        font-weight: 550;
+        font-size: $fonts-big-1920;
+        line-height: 40px;
+        margin: 0;
+        text-decoration: none;
+        color: $color-main;
+
+        &:hover {
+            color: $color-hover;
+        }
+    }
+
+    &__box {
+        @include flex-start-center();
+        padding: 28px 0 0 0;
+    }
+
+    &__link {
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__svg {
+        width: 36px;
+        height: 36px;
+        fill: none;
+
+        path {
+            fill: $color-main;
+            fill-opacity: 0.6;
+            width: 36px;
+            height: 36px;
+        }
+        
+
+        rect {
+            fill: $color-main;
+            width: 36px;
+            height: 36px;
+        }
+
+        &:hover {
+            path {
+                fill: $color-hover;
+                fill-opacity: 1;
+
+            }
+            
+    
+            rect {
+                fill: $color-hover;
+            }
+        }
+    }
+
+    &__top {
+        width: 100%;
+        text-align: end;
+    }
+
+    &__arrow {
+        transform: rotate(-90deg);
+        width: 72px;
+        height: 48px;
+    }
+
+    &__more {
+        font-weight: 550;
+        font-size: $fonts-big-1920;
+        line-height: 48px;
+        color: $color-main;
+        width: 100%;
+        text-align: start;
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    .games {
+        padding: 80px;
+
+        &__heading {
+            font-size: $fonts-giant-1680;
+            line-height: 180px;
+        }
+
+        &__block {
+            gap: 60px;
+            padding: 70px 0 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .games {
+        padding: 60px;
+
+        &__heading {
+            font-size: $fonts-giant-1440;
+            line-height: 160px;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .games {
+        padding: 40px;
+
+        &__heading {
+            font-size: $fonts-giant-1280;
+            line-height: 130px;
+        }
+
+        &__block {
+            gap: 40px;
+            padding: 80px 0 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .games {
+        padding: 32px;
+
+        &__heading {
+            font-size: $fonts-giant-1024;
+            line-height: 66px;
+        }
+
+        &__block {
+            gap: 20px;
+            padding: 34px 0 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .games {
+        padding: 18px;
+
+        &__heading {
+            font-size: $fonts-giant-700;
+            line-height: 60px;
+        }
+
+        &__block {
+            grid-template-columns: 1fr;
+            padding: 30px 0 0 0;
+        }
+    }
+}

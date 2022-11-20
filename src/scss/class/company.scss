@@ -1,0 +1,125 @@
+.company {
+    padding: 170px 320px 120px 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    &__heading {
+        font-style: normal;
+        font-weight: 550;
+        font-size: $fonts-h3-1920;
+        line-height: 105px;
+        text-align: left;
+        margin: 0;
+        padding: 0 0 160px 0;
+    }
+
+    &__block {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    &__box {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 55%;
+    }
+
+    &__title {
+        font-weight: 550;
+        font-size: $fonts-major-1920;
+        line-height: 150px;
+        margin: 0;
+    }
+
+    &__subtitle {
+        font-weight: 550;
+        font-size: $fonts-big-1920;
+        line-height: 54px;
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    .company {
+        padding: 100px 80px;
+
+        &__heading {
+            font-size: $fonts-h3-1680;
+            line-height: 90px;
+            padding: 0 0 120px 0;
+        }
+
+        &__subtitle {
+            font-size: $fonts-big-1680;
+            line-height: 40px;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .company {
+        padding: 60px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .company {
+        padding: 40px;
+
+        &__heading {
+            font-size: $fonts-h3-1280;
+            line-height: 64px;
+            padding: 0 0 125px 0;
+        }
+
+        &__title {
+            font-size: $fonts-major-1280;
+            line-height: 120px;
+        }
+
+        &__subtitle {
+            font-size: $fonts-big-1280;
+            line-height: 38px;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .company {
+        padding: 32px;
+
+        &__heading {
+            font-size: $fonts-h3-1024;
+            line-height: 40px;
+            padding: 0 0 30px;
+        }
+
+        &__title {
+            font-size: $fonts-major-1024;
+            line-height: 60px;
+        }
+
+        &__subtitle {
+            font-size: $fonts-big-1024;
+            line-height: 38px;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .company {
+        padding: 18px;
+
+        &__block {
+            flex-direction: column;
+        }
+
+        &__box {
+            width: 100%;
+        }
+    }
+}

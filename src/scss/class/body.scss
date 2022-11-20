@@ -1,0 +1,85 @@
+@import 'fonts';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Mark, sans-serif;
+  font-size: $fonts-main-1920;
+  font-style: normal;
+  font-weight: 450;
+  color: $color-main;
+}
+
+.body {
+  &_lock {
+    overflow: hidden;
+  }
+}
+
+$col: #212022, #2b2630, #4f4758, #59585a, #000000, #282130;
+$n: length($col);
+$dir: 'x' 'y';
+$m: length($dir);
+$grd: ();
+$ani: ();
+
+@for $i from 0 to $n {
+	$l: ();
+	$t: (1.5 + random(5))*1s;
+	$d: random(100)*$t/100;
+	
+	@for $j from 0 to $m {
+		$k: #{nth($dir, $j + 1)}#{$i};
+		
+		@property --#{$k} {
+			syntax: '<length-percentage>';
+			initial-value: 0%;
+			inherits: false
+		}
+		
+		@keyframes #{$k} {
+			0% { --#{$k}: 25% }
+			100% { --#{$k}: 75% }
+		}
+		
+		$l: $l var(--#{$k}, #{random(100)*1%});
+		$ani: $ani, #{$k} #{$t} #{-.5*$j*$t - $d} 
+			if(random(100) < 50, alternate, alternate-reverse)
+	}
+	
+	$grd: $grd, 
+		radial-gradient(circle at $l, 
+				nth($col, $i + 1), transparent 35%)
+}
+
+html {
+	background: $grd #212022;
+	background-position: 50%;
+	animation: $ani;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite
+}
+
+@media screen and (max-width: 1680px) {
+  body {
+    font-size: $fonts-main-1680;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  body {
+    font-size: $fonts-main-1280;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  body {
+    font-size: $fonts-main-1024;
+  }
+}

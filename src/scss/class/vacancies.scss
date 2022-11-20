@@ -1,0 +1,226 @@
+.vacancies {
+    padding: 120px;
+
+    &__heading {
+        font-weight: 550;
+        font-size: $fonts-h3-1920;
+        line-height: 105px;
+    }
+
+    &__block {
+        padding: 54px 0 0 0;
+    }
+
+    &__line {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        justify-content: space-between;
+        align-content: center;
+        text-decoration: none;
+        color: $color-main;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 50px 0;
+
+        &:first-child {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        &:hover {
+            grid-template-columns: 3fr 1fr;
+            justify-content: space-between;
+            align-content: center;
+            padding: 50px 120px;
+            margin: 0 -120px;
+            background: $color-hover;
+            width: 99.1vw;
+        }
+    }
+
+    &__vacancy {
+        @include flex-start-center();
+    }
+
+    &__title {
+        font-size: $fonts-main-1920;
+        line-height: 44px;
+        width: 769px;
+    }
+
+    &__subtitle {
+        font-size: $fonts-main-1920;
+        line-height: 44px;
+        opacity: 0.5;
+    }
+
+    &__arrows {
+        justify-self: end;
+    }
+
+    &__arrow {
+        fill: $color-main;
+        width: 48px;
+        height: 32px;
+        rotate: -90deg;
+    }
+
+    &__box {
+        margin: 70px 0 0 0;
+        @include flex-center-center();
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    .vacancies {
+        padding: 80px;
+
+        &__heading {
+            font-size: $fonts-h3-1680;
+            line-height: 76px;
+        }
+
+        &__block {
+            padding: 50px 0 0 0;
+        }
+
+        &__line {   
+            padding: 40px 0;
+
+            &:hover {
+                padding: 40px 80px;
+                margin: 0 -80px;
+                width: 100vw;
+            }
+        }
+
+        &__title {
+            font-size: $fonts-main-1680;
+            line-height: 36px;
+            width: 720px;
+        }
+    
+        &__subtitle {
+            font-size: $fonts-main-1680;
+            line-height: 36px;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .vacancies {
+        padding: 60px;
+
+        &__line {   
+            &:hover {
+                padding: 40px 60px;
+                margin: 0 -60px;
+                width: 100vw;
+            }
+        }
+
+        &__title {
+            width: 620px;
+        }
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .vacancies {
+        padding: 40px;
+
+        &__heading {
+            font-size: $fonts-h3-1280;
+            line-height: 64px;
+        }
+
+        &__block {
+            padding: 36px 0 0 0;
+        }
+
+        &__line {   
+            &:hover {
+                padding: 40px;
+                margin: 0 -40px;
+                width: 100vw;
+            }
+        }
+
+        &__title {
+            font-size: $fonts-main-1280;
+            line-height: 28px;
+            width: 500px;
+        }
+    
+        &__subtitle {
+            font-size: $fonts-main-1280;
+            line-height: 28px;
+        }
+
+        &__box {
+            margin: 50px 0 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .vacancies {
+        padding: 32px;
+
+        &__heading {
+            font-size: $fonts-h3-1024;
+            line-height: 40px;
+        }
+
+        &__block {
+            padding: 30px 0 0 0;
+        }
+
+        &__line {  
+            &:hover {
+                padding: 30px 32px;
+                margin: 0 -32px;
+                width: 100vw;
+            }
+        }
+
+        &__vacancy {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__title {
+            font-size: $fonts-main-1024;
+            line-height: 24px;
+            width: 100%;
+        }
+    
+        &__subtitle {
+            font-size: $fonts-main-1024;
+            line-height: 24px;
+        }
+
+        &__box {
+            margin: 50px 0 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .vacancies {
+        padding: 18px;
+
+        &__line {  
+            padding: 20px 0;
+
+            &:hover {
+                padding: 20px 18px;
+                margin: 0 -18px;
+                width: 100vw;
+            }
+        }
+
+        &__box {
+            margin: 40px 0 0 0;
+        }
+    }
+}

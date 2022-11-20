@@ -1,0 +1,168 @@
+.news {
+    padding: 120px;
+
+    &__heading {
+        font-weight: 550;
+        font-size: $fonts-h3-1920;
+        line-height: 105px;
+    }
+
+    &__block {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 80px;
+        padding: 54px 0 0 0;
+    }
+
+    &__card {
+        text-decoration: none;
+        color: $color-main;
+        
+
+        &:hover .news__subtitle {
+            color: $color-hover;
+        }
+    }
+
+    &__img {
+        width: 100%;
+        object-fit: cover;
+        padding: 0 0 28px 0;
+    }
+
+    &__box {
+        width: 100%;
+    }
+
+    &__title {
+        font-weight: 400;
+        font-size: $fonts-main-1920;
+        line-height: 44px;
+        opacity: 0.4;
+    }
+
+    &__subtitle {
+        font-weight: 400;
+        font-size: $fonts-main-1920;
+        line-height: 44px;
+    }
+
+    &__all {
+        margin: 85px 0 0 0;
+        @include flex-center-center();
+    }
+}
+
+@media screen and (max-width: 1680px) {
+    .news {
+        padding: 80px;
+
+        &__heading {
+            font-size: $fonts-h3-1680;
+            line-height: 76px;
+        }
+
+        &__block {
+            gap: 60px;
+            padding: 70px 0 0 0;
+        }
+
+        &__title {
+            font-size: $fonts-main-1680;
+            line-height: 34px;
+        }
+    
+        &__subtitle {
+            font-size: $fonts-main-1680;
+            line-height: 34px;
+        }
+
+        &__all {
+            margin: 60px 0 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .news {
+        padding: 60px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    .news {
+        padding: 40px;
+
+        &__heading {
+            font-size: $fonts-h3-1280;
+            line-height: 64px;
+        }
+
+        &__block {
+            gap: 40px;
+            padding: 80px 0 0 0;
+        }
+
+        &__title {
+            font-size: $fonts-main-1280;
+            line-height: 28px;
+        }
+    
+        &__subtitle {
+            font-size: $fonts-main-1280;
+            line-height: 28px;
+        }
+
+        &__all {
+            margin: 40px 0 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .news {
+        padding: 32px;
+
+        &__heading {
+            font-size: $fonts-h3-1024;
+            line-height: 40px;
+        }
+
+        &__block {
+            gap: 20px;
+            padding: 34px 0 0 0;
+        }
+
+        &__title {
+            font-size: $fonts-main-1024;
+            line-height: 24px;
+        }
+    
+        &__subtitle {
+            font-size: $fonts-main-1024;
+            line-height: 24px;
+        }
+
+        &__all {
+            margin: 30px 0 0 0;
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .news {
+        padding: 18px;
+
+        &__block {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            overflow: hidden;
+            overflow-x: scroll;
+        }
+
+        &__box {
+            width: 240px;
+        }
+    }
+}

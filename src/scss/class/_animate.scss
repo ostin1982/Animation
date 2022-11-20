@@ -1,0 +1,23 @@
+@keyframes animate-menu {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes animate-arrow {
+    0% {
+        margin: 0;
+    }
+
+    50% {
+        margin: 6px 0 0 0;
+    }
+
+    100% {
+        margin: 0;
+    }
+}
